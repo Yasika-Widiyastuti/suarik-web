@@ -35,24 +35,17 @@
         areaGrid.appendChild(card);
     });
 
-    // Selection styling
-    emoGrid.querySelectorAll('.emotion-card').forEach(function (card) {
-        var input = card.querySelector('input');
-        card.addEventListener('click', function () {
+    // Selection styling — biarkan <label> native yang toggle checkbox/radio,
+    // JS cukup dengarkan event `change` dan update kelas `.is-selected`.
+    emoGrid.querySelectorAll('.emotion-card input').forEach(function (input) {
+        input.addEventListener('change', function () {
             emoGrid.querySelectorAll('.emotion-card').forEach(function (c) { c.classList.remove('is-selected'); });
-            card.classList.add('is-selected');
-            input.checked = true;
+            if (input.checked) input.closest('.emotion-card').classList.add('is-selected');
         });
     });
-    areaGrid.querySelectorAll('.area-card').forEach(function (card) {
-        var input = card.querySelector('input');
-        card.addEventListener('click', function (e) {
-            if (e.target === input) return;
-            input.checked = !input.checked;
-            card.classList.toggle('is-selected', input.checked);
-        });
+    areaGrid.querySelectorAll('.area-card input').forEach(function (input) {
         input.addEventListener('change', function () {
-            card.classList.toggle('is-selected', input.checked);
+            input.closest('.area-card').classList.toggle('is-selected', input.checked);
         });
     });
 
