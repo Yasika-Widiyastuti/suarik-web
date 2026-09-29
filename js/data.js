@@ -126,14 +126,14 @@
     }
     function empatheticGreeting(emotion) {
         var m = {
-            Tenang: 'Senang mendengar hari ini terasa cukup tenang untukmu.',
-            Bersemangat: 'Bagus, energimu sedang tersedia hari ini.',
-            Cemas: 'Rasa cemas boleh hadir. Kita coba pelan-pelan menyusunnya.',
-            Kewalahan: 'Ketika terlalu banyak yang terasa bersamaan, satu langkah kecil sudah cukup.',
-            Lelah: 'Lelah adalah sinyal tubuh yang layak didengarkan.',
-            Sedih: 'Rasa sedih boleh diberi ruang. Kamu tidak sendirian.'
+            Tenang: 'Senang mendengar hari ini terasa cukup tenang untukmu',
+            Bersemangat: 'Bagus, energimu sedang tersedia hari ini',
+            Cemas: 'Rasa cemas boleh hadir. Kita coba pelan-pelan menyusunnya',
+            Kewalahan: 'Ketika terlalu banyak yang terasa bersamaan, satu langkah kecil sudah cukup',
+            Lelah: 'Lelah adalah sinyal tubuh yang layak didengarkan',
+            Sedih: 'Rasa sedih boleh diberi ruang. Kamu tidak sendirian'
         };
-        return m[emotion] || 'Terima kasih sudah menyempatkan diri untuk check-in.';
+        return m[emotion] || 'Terima kasih sudah menyempatkan diri untuk check-in';
     }
     function stressLabel(level) {
         if (level <= 3) return 'Ringan';

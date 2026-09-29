@@ -2,7 +2,7 @@
    Suarik — Stylesheet utama
    Palet, layout, komponen, dan utilitas aksesibilitas.
    ========================================================================== */
-
+[hidden] { display: none !important; }
 :root {
     --navy: #202A44;
     --purple: #8B7DB8;
@@ -164,6 +164,15 @@ img, svg { max-width: 100%; display: block; }
 }
 .primary-nav a.active { background: var(--navy); color: var(--white); }
 .nav-cta { margin-left: 4px; }
+.primary-nav a.nav-cta {
+    color: var(--white);
+    background: var(--coral);
+}
+.primary-nav a.nav-cta:hover,
+.primary-nav a.nav-cta:focus-visible {
+    color: var(--white);
+    background: var(--purple-strong);
+}
 
 .nav-toggle {
     display: none;
@@ -171,8 +180,8 @@ img, svg { max-width: 100%; display: block; }
     cursor: pointer; border-radius: 10px;
 }
 .nav-toggle-bar {
-    display: block; width: 22px; height: 2px; background: var(--navy);
-    margin: 5px 0; transition: transform var(--transition), opacity var(--transition);
+    display: block; width: 18px; height: 2px; background: var(--navy);
+    margin: 3px 0; transition: transform var(--transition), opacity var(--transition);
 }
 
 @media (max-width: 960px) {
